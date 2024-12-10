@@ -276,24 +276,68 @@ namespace URP_Wireframe_Shader.Shader_Systems
 
             ProcessedMeshData processedData = ScriptableObject.CreateInstance<ProcessedMeshData>();
 
-            Vector3[] verts = originalMesh.vertices;
-            int[] triangles = originalMesh.triangles;
+            // Get the original mesh data
+            Vector3[] originalVertices = originalMesh.vertices;
+            int[] originalTriangles = originalMesh.triangles;
+            Vector2[] originalUVs = originalMesh.uv;
+            Vector3[] originalNormals = originalMesh.normals;
 
-            processedData.vertices = new Vector3[triangles.Length];
-            processedData.triangles = new int[triangles.Length];
-            processedData.colors = new Color32[triangles.Length];
+            // Create new arrays for the processed mesh
+            List<Vector3> newVertices = new List<Vector3>();
+            List<Vector2> newUVs = new List<Vector2>();
+            List<Vector3> newNormals = new List<Vector3>();
+            List<Color32> newColors = new List<Color32>();
+            List<int> newTriangles = new List<int>();
 
-            for (int i = 0; i < triangles.Length; i++)
+            // Process each triangle
+            for (int i = 0; i < originalTriangles.Length; i += 3)
             {
-                processedData.vertices[i] = verts[triangles[i]];
-                processedData.triangles[i] = i;
+                // Get indices for this triangle
+                int idx0 = originalTriangles[i];
+                int idx1 = originalTriangles[i + 1];
+                int idx2 = originalTriangles[i + 2];
 
-                int triIndex = i % 3;
-                processedData.colors[i] = triIndex == 0 ? new Color32(255, 0, 0, 255) :
-                    triIndex == 1 ? new Color32(0, 255, 0, 255) :
-                    new Color32(0, 0, 255, 255);
+                // Add vertices
+                newVertices.Add(originalVertices[idx0]);
+                newVertices.Add(originalVertices[idx1]);
+                newVertices.Add(originalVertices[idx2]);
+
+                // Add UVs if they exist
+                if (originalUVs != null && originalUVs.Length > 0)
+                {
+                    newUVs.Add(originalUVs[idx0]);
+                    newUVs.Add(originalUVs[idx1]);
+                    newUVs.Add(originalUVs[idx2]);
+                }
+
+                // Add normals if they exist
+                if (originalNormals != null && originalNormals.Length > 0)
+                {
+                    newNormals.Add(originalNormals[idx0]);
+                    newNormals.Add(originalNormals[idx1]);
+                    newNormals.Add(originalNormals[idx2]);
+                }
+
+                // Add barycentric coordinates as colors
+                newColors.Add(new Color32(255, 0, 0, 255));   // (1, 0, 0)
+                newColors.Add(new Color32(0, 255, 0, 255));   // (0, 1, 0)
+                newColors.Add(new Color32(0, 0, 255, 255));   // (0, 0, 1)
+
+                // Add triangle indices
+                int baseIndex = i;
+                newTriangles.Add(baseIndex);
+                newTriangles.Add(baseIndex + 1);
+                newTriangles.Add(baseIndex + 2);
             }
 
+            // Store the processed data
+            processedData.vertices = newVertices.ToArray();
+            processedData.triangles = newTriangles.ToArray();
+            processedData.uv = newUVs.ToArray();
+            processedData.normals = newNormals.ToArray();
+            processedData.colors = newColors.ToArray();
+
+            // Save the processed data
             AssetDatabase.CreateAsset(processedData, fullPath);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();

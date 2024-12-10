@@ -7,6 +7,8 @@ namespace URP_Wireframe_Shader.Shader_Systems
     {
         public Vector3[] vertices;
         public int[] triangles;
+        public Vector2[] uv;
+        public Vector3[] normals;
         public Color32[] colors;
         
     }

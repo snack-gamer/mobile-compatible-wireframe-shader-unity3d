@@ -8,12 +8,6 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
         _EdgeWidth ("Wireframe Edge Width", Range(0, 2)) = 1
         _EdgeThreshold ("Wireframe Edge Threshold", Range(0, 1)) = 0.1
         
-        // Texture properties
-        [Toggle] _UseMainTex ("Use Main Texture", Float) = 1
-        [NoScaleOffset] _MainTex_ST ("Main Tex ST", Vector) = (1,1,0,0)
-        [Normal] _NormalMap ("Normal Map", 2D) = "bump" {}
-        _NormalStrength ("Normal Strength", Range(0, 1)) = 1
-        
         // Texture edge detection properties
         _TextureEdgeThreshold ("Texture Edge Threshold", Range(0.0, 1.0)) = 0.2
         _TextureEdgeSharpness ("Texture Edge Sharpness", Range(1.0, 64.0)) = 32.0
@@ -25,9 +19,7 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
         _Saturation ("Saturation", Range(0, 2)) = 1
         _Hue ("Hue Shift", Range(0, 1)) = 0
         
-        // Lighting properties
-        _Metallic ("Metallic", Range(0, 1)) = 0
-        _Smoothness ("Smoothness", Range(0, 1)) = 0.5
+        // Simple lighting
         _AmbientStrength ("Ambient Light Strength", Range(0, 1)) = 0.1
         
         // Depth testing control
@@ -58,7 +50,6 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
             
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceInput.hlsl"
 
             struct Attributes
             {
@@ -66,7 +57,6 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
                 float4 color : COLOR;
                 float2 texcoord : TEXCOORD0;
                 float3 normal : NORMAL;
-                float4 tangent : TANGENT;
             };
 
             struct Varyings
@@ -74,23 +64,18 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
                 float4 positionCS : SV_POSITION;
                 float3 barycentricCoords : TEXCOORD0;
                 float2 uv : TEXCOORD1;
-                float4 screenPos : TEXCOORD2;
-                float3 positionWS : TEXCOORD3;
-                float3 normalWS : TEXCOORD4;
-                float4 tangentWS : TEXCOORD5;
+                float3 normalWS : TEXCOORD2;
             };
 
             TEXTURE2D(_MainTex);
             SAMPLER(sampler_MainTex);
-            TEXTURE2D(_NormalMap);
-            SAMPLER(sampler_NormalMap);
 
             CBUFFER_START(UnityPerMaterial)
+                float4 _MainTex_ST;
                 float4 _MainColor;
                 float4 _EdgeColor;
                 float _EdgeWidth;
                 float _EdgeThreshold;
-                float4 _MainTex_ST;
                 float _Brightness;
                 float _Contrast;
                 float _Saturation;
@@ -98,14 +83,9 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
                 float _TextureEdgeThreshold;
                 float _TextureEdgeSharpness;
                 float4 _TextureEdgeColor;
-                float _UseMainTex;
-                float _NormalStrength;
-                float _Metallic;
-                float _Smoothness;
                 float _AmbientStrength;
             CBUFFER_END
 
-            // Color correction functions remain the same
             float3 RGBToHSV(float3 rgb)
             {
                 float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
@@ -142,20 +122,12 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
             Varyings vert(Attributes input)
             {
                 Varyings output = (Varyings)0;
-                
-                // Transform position and normal
-                output.positionWS = TransformObjectToWorld(input.positionOS.xyz);
-                output.positionCS = TransformWorldToHClip(output.positionWS);
+                output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
                 output.normalWS = TransformObjectToWorldNormal(input.normal);
-                
-                // Setup tangent space
-                real sign = input.tangent.w * GetOddNegativeScale();
-                float3 tangentWS = TransformObjectToWorldDir(input.tangent.xyz);
-                output.tangentWS = float4(tangentWS, sign);
-                
-                output.screenPos = ComputeScreenPos(output.positionCS);
                 output.barycentricCoords = input.color.rgb;
-                output.uv = TRANSFORM_TEX(input.texcoord, _MainTex);
+                
+                // Properly transform UVs using the _MainTex_ST property
+                output.uv = input.texcoord * _MainTex_ST.xy + _MainTex_ST.zw;
                 
                 return output;
             }
@@ -169,25 +141,13 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
 
             float4 frag(Varyings input) : SV_Target
             {
-                // Sample textures
+                // Sample main texture
                 float4 texColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
-                float3 normalTS = UnpackNormalScale(SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, input.uv), _NormalStrength);
                 
-                // Calculate worldspace normal
-                float3 normalWS = normalize(input.normalWS);
-                float3 tangentWS = normalize(input.tangentWS.xyz);
-                float3 bitangentWS = cross(normalWS, tangentWS.xyz) * input.tangentWS.w;
-                float3x3 tangentToWorld = float3x3(tangentWS, bitangentWS, normalWS);
-                normalWS = mul(normalTS, tangentToWorld);
-                
-                // Get main light
+                // Simple lighting
                 Light mainLight = GetMainLight();
-                
-                // Calculate lighting
-                float NdotL = saturate(dot(normalWS, mainLight.direction));
-                float3 ambient = _AmbientStrength * mainLight.color;
-                float3 diffuse = NdotL * mainLight.color;
-                float3 lighting = ambient + diffuse;
+                float NdotL = saturate(dot(normalize(input.normalWS), mainLight.direction));
+                float3 lighting = lerp(_AmbientStrength, 1.0, NdotL) * mainLight.color;
                 
                 // Wireframe edge detection
                 float wireframeEdge = calculateWireframe(input.barycentricCoords, _EdgeWidth);
@@ -201,10 +161,9 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
                 
                 // Apply color correction to texture color
                 float3 correctedTexColor = ApplyColorCorrection(texColor.rgb);
-                texColor.rgb = correctedTexColor;
                 
                 // Blend texture with main color for faces
-                float4 faceColor = lerp(_MainColor, texColor * _MainColor, _UseMainTex);
+                float4 faceColor = float4(correctedTexColor * _MainColor.rgb, texColor.a * _MainColor.a);
                 
                 // Apply lighting to face color
                 faceColor.rgb *= lighting;
@@ -217,7 +176,7 @@ Shader "Custom/URPWireframeWithEdges_Mobile_V2"
                 float4 finalColor = lerp(faceColor, edgeColor, combinedEdge);
                 
                 // Keep edges fully opaque while faces use blended alpha
-                finalColor.a = combinedEdge > 0 ? edgeColor.a : (faceColor.a * _MainColor.a);
+                finalColor.a = combinedEdge > 0 ? edgeColor.a : faceColor.a;
                 
                 return finalColor;
             }

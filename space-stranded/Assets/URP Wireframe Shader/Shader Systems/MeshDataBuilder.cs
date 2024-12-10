@@ -10,6 +10,7 @@ namespace URP_Wireframe_Shader.Shader_Systems
     {
         public ProcessedMeshData processedData;
         private bool isInitialized = false;
+        private Mesh generatedMesh;
 
         private void OnEnable()
         {
@@ -24,6 +25,17 @@ namespace URP_Wireframe_Shader.Shader_Systems
             if (!isInitialized && processedData != null)
             {
                 ApplyProcessedData();
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (generatedMesh != null)
+            {
+                if (Application.isPlaying)
+                    Destroy(generatedMesh);
+                else
+                    DestroyImmediate(generatedMesh);
             }
         }
 
@@ -59,22 +71,68 @@ namespace URP_Wireframe_Shader.Shader_Systems
                 return;
             }
 
-            Mesh mesh = new Mesh();
-            mesh.vertices = processedData.vertices;
-            mesh.triangles = processedData.triangles;
-            mesh.colors32 = processedData.colors;
+            // Clean up old mesh if it exists
+            if (generatedMesh != null)
+            {
+                if (Application.isPlaying)
+                    Destroy(generatedMesh);
+                else
+                    DestroyImmediate(generatedMesh);
+            }
 
-            meshFilter.sharedMesh = mesh;
+            // Create new mesh
+            generatedMesh = new Mesh();
+            generatedMesh.name = "ProcessedMesh_" + gameObject.name;
+
+            // Apply vertex data
+            generatedMesh.vertices = processedData.vertices;
+            generatedMesh.triangles = processedData.triangles;
+
+            // Apply UVs if they exist
+            if (processedData.uv != null && processedData.uv.Length > 0)
+            {
+                generatedMesh.uv = processedData.uv;
+            }
+
+            // Apply normals if they exist
+            if (processedData.normals != null && processedData.normals.Length > 0)
+            {
+                generatedMesh.normals = processedData.normals;
+            }
+            else
+            {
+                generatedMesh.RecalculateNormals();
+            }
+
+            // Apply colors for barycentric coordinates
+            generatedMesh.colors32 = processedData.colors;
+
+            // Ensure proper bounds
+            generatedMesh.RecalculateBounds();
+
+            // Assign the mesh
+            meshFilter.sharedMesh = generatedMesh;
             isInitialized = true;
 
-            //Debug.Log($"[MeshDataBuilder] Successfully applied processed mesh data on {gameObject.name}. Vertices: {mesh.vertexCount}");
-            
+            //Debug.Log($"[MeshDataBuilder] Successfully applied processed mesh data on {gameObject.name}. Vertices: {generatedMesh.vertexCount}");
         }
 
         public void ForceReprocess()
         {
             isInitialized = false;
             ApplyProcessedData();
+        }
+
+        private void OnDestroy()
+        {
+            // Clean up generated mesh
+            if (generatedMesh != null)
+            {
+                if (Application.isPlaying)
+                    Destroy(generatedMesh);
+                else
+                    DestroyImmediate(generatedMesh);
+            }
         }
     }
 }
