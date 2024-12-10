@@ -30,6 +30,7 @@ namespace URP_Wireframe_Shader.Shader_Systems
 
         private void OnGUI()
         {
+            InitializeStyleIfNeeded();
             EditorGUILayout.Space(10);
             DrawHeader();
             EditorGUILayout.Space(10);
@@ -44,7 +45,6 @@ namespace URP_Wireframe_Shader.Shader_Systems
             DrawProcessButton();
             EditorGUILayout.Space(10);
             DrawStatusBar();
-            InitializeStyleIfNeeded();
 
         }
         
@@ -62,11 +62,23 @@ namespace URP_Wireframe_Shader.Shader_Systems
 
         private void DrawHeader()
         {
+            // Add null check for extra safety
+            if (headerStyle == null)
+            {
+                InitializeStyleIfNeeded();
+            }
+
             EditorGUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
-            EditorGUILayout.LabelField("Mesh Preprocessor", headerStyle);
-            GUILayout.FlexibleSpace();
-            EditorGUILayout.EndHorizontal();
+            try 
+            {
+                GUILayout.FlexibleSpace();
+                EditorGUILayout.LabelField("Mesh Preprocessor", headerStyle);
+                GUILayout.FlexibleSpace();
+            }
+            finally 
+            {
+                EditorGUILayout.EndHorizontal();
+            }
         }
 
         private void DrawSourceSelection()

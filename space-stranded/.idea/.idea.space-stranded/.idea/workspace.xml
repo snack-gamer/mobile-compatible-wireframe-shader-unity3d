@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4c37b09-d66e-4c66-940b-d516ff04e23b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.space-stranded/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.space-stranded/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.space-stranded/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes/Shader Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes/Shader Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes/Shader Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes/Shader Demo/Main Camera Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo Scenes/Shader Demo/Main Camera Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generic Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generic Assets/New Universal Render Pipeline Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generic Assets/New Universal Render Pipeline Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generic Assets/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generic Assets/New Universal Render Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship_Base_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/3D Models/Ship/Ship_Base_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/Mats.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/Mats/Floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/Mats/Floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/Mats/Walls.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Environment/Mats/Walls.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Helpers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Helpers/Turntable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Helpers/Turntable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Gun_-22810_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Gun_-22810_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Ship_-22802_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Ship_-22802_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopD.001_-22818_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopD.001_-22818_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopD.002_-22826_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopD.002_-22826_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopU.001_-22834_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopU.001_-22834_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopU.002_-22842_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/StopU.002_-22842_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Vint.001_-22850_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Vint.001_-22850_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Vint.002_-22858_ProcessedData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Pre Processed Data/Vint.002_-22858_ProcessedData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/MeshDataBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/MeshDataBuilder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/MeshPreprocessorWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/MeshPreprocessorWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/ProcessedMeshData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader Systems/ProcessedMeshData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader/URPWireframeWithEdges.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Shader/URPWireframeWithEdges.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Wireframe Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Wireframe Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Wireframe Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Wireframe Materials/Ship.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP Wireframe Shader/Wireframe Materials/Ship.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AppLovinInternalSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BuildReportToolOptions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mono_crash.16cb09dc64.0.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30c530d7db63441097c8dced8b6e46f0176400/8e/38432b4b/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Mobile Wireframe Shader/Assets/URP Wireframe Shader/Wireframe Systems/MeshPreprocessorWindow.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2nZmHe6scQ65RVuler7AQJWInIc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.52f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;$PROJECT_DIR$&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.52f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;$PROJECT_DIR$&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c37b09-d66e-4c66-940b-d516ff04e23b" name="Changes" comment="" />
+      <created>1729188886623</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729188886623</updated>
+      <workItem from="1729188888159" duration="906000" />
+      <workItem from="1729366159489" duration="1971000" />
+      <workItem from="1729372427397" duration="5312000" />
+      <workItem from="1729380118826" duration="1959000" />
+      <workItem from="1729418489098" duration="2017000" />
+      <workItem from="1729420522075" duration="20241000" />
+      <workItem from="1729501368146" duration="21547000" />
+      <workItem from="1729592138063" duration="17323000" />
+      <workItem from="1729680884533" duration="35194000" />
+      <workItem from="1729764101412" duration="9641000" />
+      <workItem from="1729803313928" duration="7606000" />
+      <workItem from="1729853805860" duration="4874000" />
+      <workItem from="1729873694458" duration="11657000" />
+      <workItem from="1729939680927" duration="4612000" />
+      <workItem from="1729967380544" duration="12421000" />
+      <workItem from="1730024187877" duration="9478000" />
+      <workItem from="1730108714523" duration="13548000" />
+      <workItem from="1730139512272" duration="18577000" />
+      <workItem from="1730197074187" duration="18527000" />
+      <workItem from="1730230674900" duration="4447000" />
+      <workItem from="1730235545105" duration="14653000" />
+      <workItem from="1730288077562" duration="29167000" />
+      <workItem from="1730333608817" duration="3847000" />
+      <workItem from="1730370592979" duration="8569000" />
+      <workItem from="1730393899940" duration="16085000" />
+      <workItem from="1730459035544" duration="18836000" />
+      <workItem from="1730495102156" duration="10870000" />
+      <workItem from="1730544296653" duration="4879000" />
+      <workItem from="1730556770769" duration="9396000" />
+      <workItem from="1730576600781" duration="9184000" />
+      <workItem from="1730591876849" duration="3534000" />
+      <workItem from="1730631621079" duration="5229000" />
+      <workItem from="1730641336889" duration="3210000" />
+      <workItem from="1730661425462" duration="4970000" />
+      <workItem from="1730717878134" duration="2097000" />
+      <workItem from="1730725073306" duration="2714000" />
+      <workItem from="1731794844763" duration="4511000" />
+      <workItem from="1731862991786" duration="23482000" />
+      <workItem from="1731962473331" duration="11961000" />
+      <workItem from="1732015867497" duration="5021000" />
+      <workItem from="1732024636036" duration="9992000" />
+      <workItem from="1732044238836" duration="13257000" />
+      <workItem from="1732100782006" duration="19981000" />
+      <workItem from="1733263980518" duration="2269000" />
+      <workItem from="1733321778955" duration="9853000" />
+      <workItem from="1733401486286" duration="13295000" />
+      <workItem from="1733427482461" duration="12538000" />
+      <workItem from="1733512996162" duration="4535000" />
+      <workItem from="1733527356429" duration="9061000" />
+      <workItem from="1733569849162" duration="22305000" />
+      <workItem from="1733693974920" duration="14827000" />
+      <workItem from="1733745370125" duration="14185000" />
+      <workItem from="1733769103012" duration="7370000" />
+      <workItem from="1733797317026" duration="1131000" />
+      <workItem from="1733831308920" duration="19100000" />
+      <workItem from="1733865251929" duration="5274000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
