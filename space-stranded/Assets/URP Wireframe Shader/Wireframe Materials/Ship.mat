@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4854112757492157914
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ship
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: e7c169514a7884562a06995a9df77b30, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DitherTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e7c169514a7884562a06995a9df77b30, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _AmbientStrength: 0.398
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _Brightness: 1.15
+    - _BumpScale: 1
+    - _ChannelSplitAmount: 0
+    - _Contrast: 2
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DebugBarycentricCoords: 1
+    - _DepthPower: 1.83
+    - _DepthThreshold: 0.652
+    - _DetectionType: 0
+    - _DitherDarkness: 0.384
+    - _DitherPixelSize: 14.4
+    - _DitherStrength: 0.324
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EdgeBlendMode: 1
+    - _EdgeSharpness: 64
+    - _EdgeStrength: 2.51
+    - _EdgeThreshold: 1
+    - _EdgeWidth: 0.84
+    - _EnableOutline: 0
+    - _FaceColorBlend: 0.5
+    - _GlossinessSource: 0
+    - _Hue: 1
+    - _HueShift: 0
+    - _MeshOutlineWidth: 0.04
+    - _Metallic: 0.64
+    - _NormalEdgeSharpness: 17.4
+    - _NormalEdgeThreshold: 0.552
+    - _NormalEdgeWidth: 3.12
+    - _NormalPower: 5.5
+    - _NormalSmoothing: 1.272
+    - _NormalStrength: 0.398
+    - _NormalThreshold: 0.476
+    - _OutlineJaggedness: 0
+    - _OutlineMaxDistance: 1.09
+    - _OutlineMode: 0
+    - _OutlineOffset: 0.512
+    - _OutlinePixelation: 9.3
+    - _OutlineThickness: 1.55
+    - _OutlineType: 0
+    - _OutlineWidth: 5.68
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SampleDistance: 1.171
+    - _Saturation: 1.19
+    - _ScaleWithDistance: 1
+    - _Sensitivity: 0.669
+    - _Shininess: 0
+    - _Smoothness: 0.422
+    - _SmoothnessSource: 0
+    - _SpecSource: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _TextureEdgeColorInfluence: 0.787
+    - _TextureEdgeContrast: 5.31
+    - _TextureEdgeInvert: 0
+    - _TextureEdgeMaxValue: 0.436
+    - _TextureEdgeMinValue: 0.44
+    - _TextureEdgeSharpness: 38
+    - _TextureEdgeSoftness: 0.48
+    - _TextureEdgeThreshold: 0.646
+    - _TextureEdgeWeightB: 0.333
+    - _TextureEdgeWeightG: 0.334
+    - _TextureEdgeWeightR: 0.333
+    - _TextureEdgeWidth: 0.45
+    - _TextureShadeBlend: 1
+    - _ToonRampSmoothness: 0.432
+    - _ToonRampThreshold: 0.384
+    - _UseChannelSplitting: 0
+    - _UseMainTex: 1
+    - _UseNormalEdges: 1
+    - _UseNormalMap: 1
+    - _VertexAnimationThreshold: 0
+    - _WireThickness: 143
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorAdjust: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorBalance: {r: 1, g: 1, b: 1, a: 0}
+    - _DitherTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _EdgeColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 1, g: 0.8820755, b: 0.8820755, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _TextureEdgeColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _WireColor: {r: 1, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
