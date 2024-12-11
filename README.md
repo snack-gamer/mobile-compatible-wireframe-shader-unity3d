@@ -118,7 +118,7 @@ Target platform supporting Shader Model 3.0
 ## Acknowledgements
 
  - [Awesome Catlike Coding](https://catlikecoding.com/unity/tutorials/advanced-rendering/flat-and-wireframe-shading/)
- - [Awesome README](https://en.wikipedia.org/wiki/Barycentric_coordinate_system)
+ - [Barycentric coordinate system](https://en.wikipedia.org/wiki/Barycentric_coordinate_system)
 
 
 ## License
