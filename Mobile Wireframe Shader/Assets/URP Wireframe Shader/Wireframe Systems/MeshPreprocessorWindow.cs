@@ -7,7 +7,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace URP_Wireframe_Shader.Shader_Systems
+namespace URP_Wireframe_Shader.Wireframe_Systems
 {
     public class MeshPreprocessorWindow : EditorWindow
     {

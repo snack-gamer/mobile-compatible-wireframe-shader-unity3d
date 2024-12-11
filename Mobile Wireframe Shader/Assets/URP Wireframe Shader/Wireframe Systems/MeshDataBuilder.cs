@@ -1,9 +1,7 @@
-using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
+using UnityEngine;
 
-namespace URP_Wireframe_Shader.Shader_Systems
+namespace URP_Wireframe_Shader.Wireframe_Systems
 {
     [RequireComponent(typeof(MeshFilter))]
     public class MeshDataBuilder : MonoBehaviour

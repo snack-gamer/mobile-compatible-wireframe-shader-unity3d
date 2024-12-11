@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace URP_Wireframe_Shader.Shader_Systems
+namespace URP_Wireframe_Shader.Wireframe_Systems
 {
     [CreateAssetMenu(fileName = "WireframeMeshData", menuName = "Mesh/Wireframe Mesh Data")]
     public class ProcessedMeshData : ScriptableObject
