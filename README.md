@@ -49,7 +49,7 @@ Implements proper transparency handling
 
 Open the Mesh Preprocessor tool:
 Tools > Wireframe Shader Tool > Mesh Preprocessor
-
+```
 ![Screenshot 2024-12-11 at 2 44 51 AM](https://github.com/user-attachments/assets/04f0423d-4c2c-488a-a29e-2a24328e71a4)
 
 
@@ -62,6 +62,7 @@ Click "Process Meshes"
 
 ![Screenshot 2024-12-11 at 2 31 17 AM](https://github.com/user-attachments/assets/008a96fc-fa52-46ee-a039-0d11efaf6147)
 
+```
 Apply the wireframe shader:
 
 Select your processed object
